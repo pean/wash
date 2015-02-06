@@ -1,5 +1,5 @@
 # Wash Tiny URL Shortener
-Wash is tiny url shortener class that will store a url and return a tiny url from a JSON REST API request. 
+Wash is tiny url shortener composer package that will store a url and return a tiny url from a JSON REST API request. 
 
 It is build to work from the index file and will identify a tiny url and redirect or else continue with your regular website. Some .htaccess magic might be required though.
 
@@ -18,10 +18,19 @@ Return:
 https://wa.se/s5f4
 ```
 
+Error response: 
+```
+{
+  "status": 0,
+  "errorMsg": "Descriptive error message"
+}
+```
+
 CURL Example:
 ```
-curl —X POST -d '{ "token": "TOKEN","url": "http://wa.se" }' http://mod.local/git/pa/wash/
-``
+curl —X POST -d '{ "token": "TOKEN","url": "http://wa.se" }' http://wa.se/
+```
+
 
 Made with the great [hashids](http://hashids.org).
 

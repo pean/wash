@@ -1,0 +1,23 @@
+{
+  "name": "pean/wash",
+  "description": "Tiny URL Shortener",
+  "authors": [
+    {
+      "name": "Peter Andersson",
+      "email": "pean@wa.se",
+      "homepage": "https://github.com/pean/wash",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "hashids/hashids": "~1.0@dev",
+    "php": ">=5.3.2"
+  },
+  "autoload": {
+    "psr-0": {
+      "Pean": "src/"
+    }
+  },
+  "license": "MIT",
+  "minimum-stability": "dev"
+}

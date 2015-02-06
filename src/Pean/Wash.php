@@ -107,8 +107,8 @@ class Wash {
       // Track GA
       $this->ga($hash,$url_id,$url);
 
-      $this->response(1,"url",$url);
-      // header('Location: '.$url);
+      // $this->response(1,"url",$url);
+      header('Location: '.$url);
       exit;
     }
 

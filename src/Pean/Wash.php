@@ -167,6 +167,7 @@ class Wash {
   }
 
   protected function response($status,$key,$str) {
+    header('Content-type: application/json');
     echo json_encode(array("status" => $status, $key => $str ));
     exit;
   }

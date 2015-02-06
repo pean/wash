@@ -36,7 +36,7 @@ class Wash {
 
   }
 
-  protected function ga($hash,$url_id) {
+  protected function ga($hash,$url_id,$url) {
 
     $item = '/Wash/'.$hash.'/'.$url_id;
 
@@ -49,7 +49,7 @@ class Wash {
     $session = new \UnitedPrototype\GoogleAnalytics\Session();
 
     $page = new \UnitedPrototype\GoogleAnalytics\Page($item);
-    $page->setTitle($item);
+    $page->setTitle($url);
 
     $tracker->trackPageview($page, $session, $visitor);
 
@@ -105,7 +105,7 @@ class Wash {
       }
 
       // Track GA
-      $this->ga($hash,$url_id);
+      $this->ga($hash,$url_id,$url);
 
       $this->response(1,"url",$url);
       // header('Location: '.$url);

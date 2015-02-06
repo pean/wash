@@ -50,7 +50,7 @@ class Wash {
 
   protected function hashids() {
     // Init hasids
-    $this->hashids = new Hashids\Hashids(md5($this->config['salt']));
+    $this->hashids = new \Hashids\Hashids(md5($this->config['salt']));
   }
 
   protected function gotoURL() {

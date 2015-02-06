@@ -9,7 +9,7 @@ class Wash {
   protected $dbh;
   protected $config;
 
-  function hello() {
+  public function hello() {
     echo "Hello Wash!";
   }
 
@@ -33,6 +33,25 @@ class Wash {
     elseif(!empty($this->arr['url'])) {
       $this->createURL();
     }
+
+  }
+
+  protected function ga($hash,$url_id) {
+
+    $item = '/Wash/'.$hash.'/'.$url_id;
+
+    $tracker = new \UnitedPrototype\GoogleAnalytics\Tracker($this->config['ga']['id'], $this->config['ga']['site']);
+    $visitor = new \UnitedPrototype\GoogleAnalytics\Visitor();
+    $visitor->setIpAddress($_SERVER['REMOTE_ADDR']);
+    $visitor->setUserAgent($_SERVER['HTTP_USER_AGENT']);
+    $visitor->setScreenResolution('1x1');
+
+    $session = new \UnitedPrototype\GoogleAnalytics\Session();
+
+    $page = new \UnitedPrototype\GoogleAnalytics\Page($item);
+    $page->setTitle($item);
+
+    $tracker->trackPageview($page, $session, $visitor);
 
   }
 
@@ -84,6 +103,10 @@ class Wash {
       } catch (PDOException $e) {
         $this->response(0,"errorMsg","Could count click: ".$e->getMessage());
       }
+
+      // Track GA
+      $this->ga($hash,$url_id);
+
       $this->response(1,"url",$url);
       // header('Location: '.$url);
       exit;

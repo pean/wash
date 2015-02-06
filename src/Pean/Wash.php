@@ -38,7 +38,7 @@ class Wash {
 
   protected function db() {
     try {
-      $this->dbh = new PDO(
+      $this->dbh = new \PDO(
         'mysql:host='.$this->config['db']['host'].';port=3306;dbname='.$this->config['db']['db'],
         $this->config['db']['user'],
         $this->config['db']['passw']

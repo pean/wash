@@ -76,7 +76,7 @@ class Wash {
     $hash = end(explode('/',$url));
 
     // Nothng there. 
-    if(empty(preg_match('/^[a-zA-Z0-9]+$/',$hash))) {
+    if(!preg_match('/^[a-zA-Z0-9]+$/',$hash))) {
       return FALSE;
     }
 

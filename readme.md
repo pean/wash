@@ -19,7 +19,7 @@ POST Payload:
 
 Return: 
 ```
-https://wa.se/s5f4
+http://wa.se/s5f4
 ```
 
 Error response: 
@@ -57,11 +57,12 @@ $wash = new Pean\Wash(
       'passw' => '',
       'db' => 'wa',
     ),
-    'salt' => '[something salty',
+    'salt' => '[something salty]',
     'ga' => array (
       'id' => 'UA-12345-6',
       'site' => 'wa.se'
-    )
+    ),
+    'test' => '0'
   )
 );
 ```

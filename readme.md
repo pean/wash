@@ -5,6 +5,9 @@ It is build to work from the index file and will identify a tiny url and redirec
 
 I use this together with a keyword workfow in [Alfred](http://www.alfredapp.com/) that will copy the shortened url to clipboard.
 
+Wash can also be used with the
+[Wash Android App](https://github.com/pean/wash-android)
+
 Hits on shortened url will create a pageview in Google Analytics.
 
 ## API Call to create url
@@ -62,7 +65,10 @@ $wash = new Pean\Wash(
       'id' => 'UA-12345-6',
       'site' => 'wa.se'
     ),
-    'test' => '0'
+    'test' => '0',
+    'pushbullet' = array(
+      'token' => '658a17ac3a4ce4b2e80887347a2caf8a'
+    )
   )
 );
 ```

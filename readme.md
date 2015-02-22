@@ -10,7 +10,7 @@ Wash can also be used with the
 
 Hits on shortened url will create a pageview in Google Analytics.
 
-Wash is available on [Packagis](https://packagist.org/packages/pean/wash)
+Wash is available on [Packagist](https://packagist.org/packages/pean/wash)
 
 
 ## API Call to create url

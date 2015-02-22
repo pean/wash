@@ -10,6 +10,9 @@ Wash can also be used with the
 
 Hits on shortened url will create a pageview in Google Analytics.
 
+Wash is available on [Packagis](https://packagist.org/packages/pean/wash)
+
+
 ## API Call to create url
 
 POST Payload:
@@ -39,6 +42,13 @@ curl —X POST -d '{ "token": "TOKEN","url": "http://wa.se" }' http://wa.se/
 ```
 
 # Install
+
+Add this to composer.json:
+```
+"require": {
+  "pean/wash": "dev-master",
+},
+```
 
 Create the tables from `tables.sql` and then do this:
 

@@ -12,6 +12,11 @@ Hits on shortened url will create a pageview in Google Analytics.
 
 Wash is available on [Packagist](https://packagist.org/packages/pean/wash)
 
+This is built for my own use as I happen to own a super short domain and
+needed something self-hosted.
+
+/Peter
+
 
 ## API Call to create url
 

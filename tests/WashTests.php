@@ -85,6 +85,18 @@ class WashTests extends \PHPUnit_Framework_TestCase {
 
   }
 
+  public function testGetAlias() {
+
+    $alias = 'wash';
+
+    $method = new ReflectionMethod($this->wash,'getAlias');
+    $method->setAccessible(TRUE);
+
+    $id = $method->invokeArgs($this->wash, array($alias));
+    $this->assertEquals(FALSE,$id);
+
+  }
+
   public function testGotoURL() {
     $method = new ReflectionMethod($this->wash,'gotoURL');
     $method->setAccessible(TRUE);

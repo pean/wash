@@ -80,7 +80,13 @@ class Wash {
       return FALSE;
     }
 
-    $url_id = $this->hashids('decode',$hash);
+    // Check alias first
+    $url_id = $this->getAlias($hash);
+
+    // If not an alias, go to hash
+    if($url_id === FALSE) {
+      $url_id = $this->hashids('decode',$hash);
+    }
 
     if(preg_match('/^[\d]+$/',$url_id)) {
       // Something there
@@ -131,6 +137,22 @@ class Wash {
         }
       }
     }
+  }
+
+  protected function getAlias($alias) {
+    $this->db();
+    $sql = "select url_id from wash_aliases where alias=?";
+    $stmt = $this->dbh->prepare($sql);
+    try {
+      $stmt->execute(array($alias));
+      $url_id = $stmt->fetchColumn();
+    } catch (PDOException $e) {
+      $this->response(0,"errorMsg","Could not fetch alias: ".$e->getMessage());
+    }
+    if(!empty($url_id)) {
+      return $url_id;
+    }
+    return FALSE;
   }
 
   protected function getUser() {

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "30a0f74984112054f4eb7b9ee5769704",
+    "hash": "1b8c901ac4e6c3d666360298261d330f",
     "packages": [
         {
             "name": "hashids/hashids",
@@ -62,6 +62,55 @@
                 "youtube"
             ],
             "time": "2015-01-21 00:49:41"
+        },
+        {
+            "name": "ivkos/pushbullet",
+            "version": "2.9.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ivkos/PushBullet-for-PHP.git",
+                "reference": "41ea12951b6057d1de79340f7ae2346fb8802348"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ivkos/PushBullet-for-PHP/zipball/41ea12951b6057d1de79340f7ae2346fb8802348",
+                "reference": "41ea12951b6057d1de79340f7ae2346fb8802348",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">= 5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivaylo Stoyanov",
+                    "email": "me@ivkos.com",
+                    "homepage": "https://github.com/ivkos"
+                }
+            ],
+            "description": "Push notifications to devices and browsers via Pushbullet",
+            "homepage": "https://github.com/ivkos/Pushbullet-for-PHP",
+            "keywords": [
+                "android",
+                "chrome",
+                "firefox",
+                "iphone",
+                "notifications",
+                "push",
+                "pushbullet",
+                "windows"
+            ],
+            "time": "2015-02-04 20:14:12"
         },
         {
             "name": "united-prototype/php-ga",
@@ -490,12 +539,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "02ba3dc638c5d3f0ab3b47ddb74f98c11dcc0c60"
+                "reference": "43aac3461a5679f486f7c96e4d7e780a59fec997"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/02ba3dc638c5d3f0ab3b47ddb74f98c11dcc0c60",
-                "reference": "02ba3dc638c5d3f0ab3b47ddb74f98c11dcc0c60",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/43aac3461a5679f486f7c96e4d7e780a59fec997",
+                "reference": "43aac3461a5679f486f7c96e4d7e780a59fec997",
                 "shasum": ""
             },
             "require": {
@@ -528,7 +577,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2015-01-25 04:39:35"
+            "time": "2015-02-11 07:17:51"
         }
     ],
     "aliases": [],

@@ -103,7 +103,9 @@ class Wash {
       $url_id = $this->identifyURL($url);
 
       if($url_id === FALSE) {
-        $this->response(0,"errorMsg","Invalid url");
+        //$this->response(0,"errorMsg","Invalid url");
+        // Do Nothing
+        return FALSE;
       }
 
       $this->db(); 
